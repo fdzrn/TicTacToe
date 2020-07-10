@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/play_with_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src = "@drawable/ic_person"
+        android:background="@android:color/transparent"
+        android:layout_alignStart="@id/grid_container"
+        android:layout_margin="30dp"
+        android:contentDescription="@null" />
+
+    <ImageButton
+        android:id="@+id/play_with_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_people"
+        android:background="@android:color/transparent"
+        android:layout_alignEnd="@id/grid_container"
+        android:layout_margin="30dp"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tv_info_gameplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:layout_below="@id/play_with_com"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:id="@+id/grid_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        android:background="@color/colorPrimaryDark"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="cellSelected"
+            android:background="@android:color/background_light"/>
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:onClick="cellSelected"/>
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:onClick="cellSelected"/>
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:onClick="cellSelected"/>
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:onClick="cellSelected"/>
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:onClick="cellSelected"/>
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:onClick="cellSelected"/>
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:onClick="cellSelected"/>
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="50sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:onClick="cellSelected"/>
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Win = "
+        android:textSize="20sp"
+        android:layout_alignStart="@id/grid_container"
+        android:layout_marginStart="35dp"
+        android:layout_below="@id/grid_container"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/tv_result_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/tv_win"
+        android:layout_below="@id/grid_container"/>
+
+    <TextView
+        android:id="@+id/tv_lose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lose = "
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_win"
+        android:layout_alignStart="@id/tv_win"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_result_lose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="0"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/tv_lose"
+        android:layout_below="@id/tv_win"/>
+
+    <TextView
+        android:id="@+id/tv_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Draw = "
+        android:textSize="20sp"
+        android:layout_alignStart="@id/tv_lose"
+        android:layout_below="@id/tv_lose"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tv_result_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/tv_draw"
+        android:layout_below="@id/tv_lose"/>
+
+    <Button
+        android:id="@+id/btn_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="restartGame"
+        android:padding="10dp"
+        android:text="@string/restart_game"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

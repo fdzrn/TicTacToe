@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="single_player">Single Player Mode</string>
+    <string name="multi_player">Multi Player Mode</string>
+    <string name="player1_win">Player 1 Wins</string>
+    <string name="player2_win">Player 2 Wins</string>
+    <string name="draw">Ended in a Draw</string>
+    <string name="restart_game">Restart Game</string>
+</resources>
